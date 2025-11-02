@@ -1,0 +1,19 @@
+
+
+# Create .gitignore
+echo "__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+.env
+*.sqlite3
+*.db
+*.log
+media/
+staticfiles/
+.DS_Store
+Thumbs.db" > PD_BE/alx_travel_app/.gitignore
