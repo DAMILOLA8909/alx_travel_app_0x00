@@ -76,12 +76,8 @@ WSGI_APPLICATION = 'alx_travel_app.wsgi.application'
 # Database Configuration
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': env('DATABASE_NAME', default='alx_travel_db'),
-        'USER': env('DATABASE_USER', default='root'),
-        'PASSWORD': env('DATABASE_PASSWORD', default=''),
-        'HOST': env('DATABASE_HOST', default='localhost'),
-        'PORT': env('DATABASE_PORT', default='3306'),
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
@@ -133,8 +129,11 @@ CORS_ALLOWED_ORIGINS = [
     "http://127.0.0.1:3000",
 ]
 
-CORS_ALLOW_ALL_ORIGINS = DEBUG  # Only in development
+# Use this OR CORS_ALLOWED_ORIGINS, not both
+CORS_ALLOW_ALL_ORIGINS = True  # Allows all origins in development
 
-# Celery Configuration
+CORS_ALLOW_CREDENTIALS = True
+
+# Celery Configuration (these are fine to keep)
 CELERY_BROKER_URL = env('CELERY_BROKER_URL', default='redis://localhost:6379/0')
 CELERY_RESULT_BACKEND = env('CELERY_RESULT_BACKEND', default='redis://localhost:6379/0')

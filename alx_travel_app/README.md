@@ -1,5 +1,8 @@
 # 🧭 ALX Travel App
 
+A Django-based travel accommodation booking application.
+
+
 ## Overview
 **ALX Travel App** is a Django-based web application designed to manage travel listings and related data through a RESTful API.  
 This project is part of the ALX backend development curriculum and demonstrates the setup of a Django REST API with proper configuration, Swagger documentation, and database integration.
@@ -37,6 +40,29 @@ alx_travel_app/
 └── README.md
 ```
 
+
+---
+
+## Features
+
+- Property listings management
+- Booking system
+- User reviews and ratings
+- RESTful API
+
+---
+
+## Models
+
+### Listing
+- Property details (title, description, address, amenities)
+- Pricing and capacity information
+- Host relationship
+
+### Booking
+- Reservation details (dates, guests, pricing)
+- Status management
+- Guest and listing relationships
 
 ---
 
